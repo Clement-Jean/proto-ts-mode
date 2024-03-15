@@ -273,7 +273,7 @@
 (defvar proto-ts-indent-rules
   (let ((offset 2))
     `((proto
-       ((parent-is "source_file") parent-bol 0)
+       ((parent-is "source_file") column-0 0)
        ((node-is "}") parent-bol 0)
        ((node-is ")") parent-bol 0)
        ((node-is "]") parent-bol 0)
@@ -287,7 +287,8 @@
        ((parent-is "block_lit") parent-bol, offset)
        ((parent-is "field_options") parent-bol, offset)
        ((parent-is "value_options") parent-bol, offset)
-       ((parent-is "rpc_body") parent-bol, offset)))))
+       ((parent-is "rpc_body") parent-bol, offset)
+       (no-node parent 0)))))
 
 (defun proto-ts-msg-imenu-node-p (node)
   (equal (treesit-node-type node) "message_name"))
