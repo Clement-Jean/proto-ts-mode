@@ -273,6 +273,7 @@
 (defvar proto-ts-indent-rules
   (let ((offset 2))
     `((proto
+       ((parent-is "source_file") parent-bol 0)
        ((node-is "}") parent-bol 0)
        ((node-is ")") parent-bol 0)
        ((node-is "]") parent-bol 0)
