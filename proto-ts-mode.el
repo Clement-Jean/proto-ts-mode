@@ -332,11 +332,11 @@
 		   constant)))
     (setq-local treesit-simple-indent-rules proto-ts-indent-rules)
     (setq-local treesit-simple-imenu-settings
-		`(("Messages"
+		`(("messages"
 		   proto-ts-msg-imenu-node-p nil proto-ts-imenu-name-function)
-		  ("Enums"
+		  ("enums"
 		   proto-ts-enu-imenu-node-p nil proto-ts-imenu-name-function)
-		  ("Services"
+		  ("services"
 		   proto-ts-svc-imenu-node-p nil proto-ts-imenu-name-function)))
     (treesit-major-mode-setup)))
 
